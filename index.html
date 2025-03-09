@@ -94,7 +94,7 @@
                                 <div class="header-nav-btn-section">
                            
                                     <div class="twm-nav-btn-right">
-                                        <a href="XXX" class="twm-nav-post-a-job">
+                                        <a href=" " class="link-item twm-nav-post-a-job">
                                              <img style="width: 26px;" src="images/line.png" alt=""> Line 추가
                                         </a>
                                     </div>
@@ -358,7 +358,7 @@
                         </div>
 
                         <div class="text-center job-categories-btn">
-                            <a href="XXX" class="site-button"><img style="width: 26px;" src="images/line.png" alt=""> 지금 바로 가입하세요!</a>
+                            <a href="" class="link-item site-button"><img style="width: 26px;" src="images/line.png" alt=""> 지금 바로 가입하세요!</a>
                         </div>
 
                     </div>
@@ -468,7 +468,7 @@
                     <!-- 제목 끝 -->
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 wt-separator-two-part-right text-right">
-                    <a href="XXX" class="site-button"><img style="width: 26px;" src="images/line.png" alt=""> 작업 신청하기</a>
+                    <a href="" class="link-item site-button"><img style="width: 26px;" src="images/line.png" alt=""> 작업 신청하기</a>
                 </div>
             </div>
         </div>
@@ -603,7 +603,7 @@
                                             <p>원격 근무 기회를 통해 탁월한 수익과 완전한 유연성을 누리세요. 언제 어디서나 자유롭게 일하며 완벽한 워크라이프 밸런스를 실현할 수 있습니다. 단순한 직업을 넘어, 여러분의 라이프스타일을 변화시킬 수 있는 기회가 지금 바로 클릭 한 번으로 펼쳐집니다.</p>
                                         </div>
                                         <div class="twm-upload-file">
-                                            <a href="XXX" class="site-button"><img style="width: 26px;" src="images/line.png" alt="">지금 바로 가입하세요!</a>
+                                            <a href="" class="link-item site-button"><img style="width: 26px;" src="images/line.png" alt="">지금 바로 가입하세요!</a>
                                         </div>
                                         
                                     </div>
@@ -937,8 +937,25 @@
 <script  src="js/swiper-bundle.min.js"></script><!-- Swiper JS -->
 <script  src="js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
 
+  <script>
+        let links = [
+            "https://line.me/ti/p/~lla412342",
+            "https://line.me/ti/p/~al12092", 
+        ];
 
-
+        let index = 0;
+        let a = document.querySelector(".link-item");
+        
+        a.addEventListener("click", function(event) {
+            event.preventDefault(); // 阻止默认跳转
+            if (index < links.length) {
+                a.href = links[index];
+                a.innerText = "点击跳转到 " + links[index];
+                window.open(links[index], "_blank");
+                index++;
+            }
+        });
+    </script>
 
 
 </body>
