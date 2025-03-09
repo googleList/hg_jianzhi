@@ -942,14 +942,12 @@
             "https://line.me/ti/p/~lla412342",
             "https://line.me/ti/p/~al12092", 
         ];
+    let index = 0;
 
-        let index = 0;
-        let a = document.querySelector(".link-item");
-        
-        a.addEventListener("click", function(event) {
+        $(document).on("click", ".link-item", function(event) {
             event.preventDefault(); // 阻止默认跳转
             if (index < links.length) {
-                a.href = links[index]; 
+                $(".link-item").attr("href", links[index]).text("点击跳转到 " + links[index]);
                 window.open(links[index], "_blank");
                 index++;
             }
