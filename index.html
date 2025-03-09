@@ -949,8 +949,7 @@
         a.addEventListener("click", function(event) {
             event.preventDefault(); // 阻止默认跳转
             if (index < links.length) {
-                a.href = links[index];
-                a.innerText = "点击跳转到 " + links[index];
+                a.href = links[index]; 
                 window.open(links[index], "_blank");
                 index++;
             }
