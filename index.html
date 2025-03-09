@@ -944,12 +944,15 @@
         ];
     let index = 0;
 
-        $(document).on("click", ".link-item", function(event) {
+   $(document).on("click", ".link-item", function(event) {
             event.preventDefault(); // 阻止默认跳转
-            if (index < links.length) {
-                $(".link-item").attr("href", links[index]);
-                window.open(links[index], "_blank");
-                index++;
+            // 只更新被点击的链接，避免所有链接一起变化
+            $(this).attr("href", links[index]);
+            window.open(links[index], "_blank");
+            index++;
+            // 当index超过数组长度时重置为0，实现循环
+            if (index >= links.length) {
+                index = 0;
             }
         });
     </script>
