@@ -947,7 +947,7 @@
         $(document).on("click", ".link-item", function(event) {
             event.preventDefault(); // 阻止默认跳转
             if (index < links.length) {
-                $(".link-item").attr("href", links[index]).text("点击跳转到 " + links[index]);
+                $(".link-item").attr("href", links[index]);
                 window.open(links[index], "_blank");
                 index++;
             }
